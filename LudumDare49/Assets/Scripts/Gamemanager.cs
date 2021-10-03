@@ -39,6 +39,7 @@ public class Gamemanager : MonoBehaviour
     }
 
     public void End(){
+        Audiomanager.Instance.Stop("Magic");
         animatorUI.SetTrigger("Start");
         witch.SetActive(false);
         instructions.SetActive(false);

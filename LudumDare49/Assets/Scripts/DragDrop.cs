@@ -34,6 +34,13 @@ public class DragDrop : MonoBehaviour
         lineRenderer.enabled = false;
     }
 
+    void SetActive(){
+        lineRenderer.enabled = false;
+        rb.isKinematic = false;
+        this.gameObject.layer = layerObject;
+
+    }
+
     /// <summary> Gets a Vector 3 of the screen to world point the mouse is hitting.</summary>
     private Vector3 GetMousePosition(){
         var mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
